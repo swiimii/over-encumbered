@@ -45,10 +45,10 @@ public abstract class Character : MonoBehaviour
         var startPoint = new Vector2(col.bounds.center.x, col.bounds.min.y);
         var direction = Vector2.down;
         var distance = .1f;
-        int maxResultCount = 10;
-        var hit = new RaycastHit2D[maxResultCount];
-        col.Cast(Vector2.down, hit, distance);
-        if (hit[0] && hit[0].transform)
+        var hit = Physics2D.Raycast(startPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground"));
+        Debug.DrawRay(startPoint, direction * distance, Color.green);
+
+        if (hit.transform)
         {
             return true;
         }
