@@ -45,10 +45,10 @@ public abstract class Character : MonoBehaviour
         var startPoint = new Vector2(col.bounds.center.x, col.bounds.min.y);
         var direction = Vector2.down;
         var distance = .1f;
-        var hit = Physics2D.Raycast(startPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground"));
-        Debug.DrawRay(startPoint, direction * distance, Color.green);
-
-        if (hit.transform)
+        int maxResultCount = 10;
+        var hit = new RaycastHit2D[maxResultCount];
+        col.Cast(Vector2.down, hit, distance);
+        if (hit[0] && hit[0].transform)
         {
             return true;
         }
@@ -59,7 +59,7 @@ public abstract class Character : MonoBehaviour
     {
         // `direction` should be either +1 or -1
         var col = GetComponent<Collider2D>();
-        var numOfRays = 3;
+        var numOfRays = 6;
         var distance = .1f;
         var deadZone = .1f;
         var startingHeight = col.bounds.min.y + deadZone;
