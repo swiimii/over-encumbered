@@ -45,7 +45,7 @@ public abstract class Character : MonoBehaviour
         var startPoint = new Vector2(col.bounds.center.x, col.bounds.min.y);
         var direction = Vector2.down;
         var distance = .1f;
-        var hit = Physics2D.Raycast(startPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground"));
+        var hit = Physics2D.Raycast(startPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Platform"));
         Debug.DrawRay(startPoint, direction * distance, Color.green);
 
         if (hit.transform)
