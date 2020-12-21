@@ -13,7 +13,7 @@ public class Briefcase : Collectible
 
     public override void Pickup()
     {
-        playerInventory.AddBriefcase();
+        playerInventory.AddBriefcase(GetComponent<SpriteRenderer>().sprite);
         gameObject.SetActive(false);
     }
 }
