@@ -20,7 +20,7 @@ public class Player : Character
         base.Update();
 
         var movement = LocalPlayerInput.GetHorizontalMovement() * movementSpeed;
-        bool isMoving = false, isJumping = false;
+        bool isMoving = false;
         if (movement < 0 && !wallLeft || movement > 0 && !wallRight)
         {
             Move(movement);
@@ -30,11 +30,9 @@ public class Player : Character
         if(LocalPlayerInput.IsPressingJump() && isReadyToJump)
         {
             Jump();
-            isJumping = false;
         }
         
         animator.SetBool("isMoving", isMoving);
-        animator.SetBool("isJumping", isJumping);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

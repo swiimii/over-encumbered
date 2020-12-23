@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
         numOfBriefcases += 1;
         AddToInventory(briefcase);
         DecrementBriefcaseTracker();
+        GetComponent<Animator>().SetInteger("numBriefcases", numOfBriefcases);
     }
     public void AddToInventory(Sprite item)
     {
