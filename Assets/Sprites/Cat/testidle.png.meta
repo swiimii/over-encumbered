@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 04492a59e73e442b1891d4de7ba77116
+guid: 245db8b5b0eb9244bbe506eabd577c34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7801298696976122834
-    second: business cat idle  1_0
+      213: -8863621273986256689
+    second: testidle_0
   - first:
-      213: -7242115406476360684
-    second: business cat idle  1_1
+      213: 6133861628516610567
+    second: testidle_1
   - first:
-      213: 4426865116702069439
-    second: business cat idle  1_2
+      213: -566337852662438464
+    second: testidle_2
   - first:
-      213: 7415338081800968008
-    second: business cat idle  1_3
+      213: 5016783597772482996
+    second: testidle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: business cat idle  1_0
+      name: testidle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 104.5
-        height: 180
+        width: 87
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c350c0b283cb390800000000000000
-      internalID: -7801298696976122834
+      spriteID: fc0347ca9671ef480800000000000000
+      internalID: -8863621273986256689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_1
+      name: testidle_1
       rect:
         serializedVersion: 2
-        x: 104
+        x: 87
         y: 0
-        width: 104.5
-        height: 180
+        width: 87
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414c79e7866de7b90800000000000000
-      internalID: -7242115406476360684
+      spriteID: 702b12d07aadf1550800000000000000
+      internalID: 6133861628516610567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_2
+      name: testidle_2
       rect:
         serializedVersion: 2
-        x: 208
+        x: 174
         y: 0
-        width: 104.5
-        height: 180
+        width: 87
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2589d7e526f6d30800000000000000
-      internalID: 4426865116702069439
+      spriteID: 0c5a23d39b6f328f0800000000000000
+      internalID: -566337852662438464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_3
+      name: testidle_3
       rect:
         serializedVersion: 2
-        x: 312
+        x: 261
         y: 0
-        width: 104.5
-        height: 180
+        width: 87
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8475c2f72b298e660800000000000000
-      internalID: 7415338081800968008
+      spriteID: 4b92c342a123f9540800000000000000
+      internalID: 5016783597772482996
       vertices: []
       indices: 
       edges: []

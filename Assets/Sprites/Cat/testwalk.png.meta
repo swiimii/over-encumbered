@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: 04492a59e73e442b1891d4de7ba77116
+guid: 587d5fc0a76cc194e8c159fdd46fcbda
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7801298696976122834
-    second: business cat idle  1_0
+      213: -1363424507877294029
+    second: testwalk_0
   - first:
-      213: -7242115406476360684
-    second: business cat idle  1_1
+      213: 5026128650585740229
+    second: testwalk_1
   - first:
-      213: 4426865116702069439
-    second: business cat idle  1_2
+      213: 643489485650159361
+    second: testwalk_2
   - first:
-      213: 7415338081800968008
-    second: business cat idle  1_3
+      213: -6583045759924482186
+    second: testwalk_3
+  - first:
+      213: 4553408750738341042
+    second: testwalk_4
+  - first:
+      213: -1946071669812866420
+    second: testwalk_5
+  - first:
+      213: 2905375402870341792
+    second: testwalk_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: business cat idle  1_0
+      name: testwalk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 104.5
-        height: 180
+        width: 57.142857
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c350c0b283cb390800000000000000
-      internalID: -7801298696976122834
+      spriteID: 33089e142a4241de0800000000000000
+      internalID: -1363424507877294029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_1
+      name: testwalk_1
       rect:
         serializedVersion: 2
-        x: 104
+        x: 57
         y: 0
-        width: 104.5
-        height: 180
+        width: 57.142857
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 414c79e7866de7b90800000000000000
-      internalID: -7242115406476360684
+      spriteID: 5c3939dc06560c540800000000000000
+      internalID: 5026128650585740229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_2
+      name: testwalk_2
       rect:
         serializedVersion: 2
-        x: 208
+        x: 114
         y: 0
-        width: 104.5
-        height: 180
+        width: 57.142857
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2589d7e526f6d30800000000000000
-      internalID: 4426865116702069439
+      spriteID: 10760e027422ee800800000000000000
+      internalID: 643489485650159361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: business cat idle  1_3
+      name: testwalk_3
       rect:
         serializedVersion: 2
-        x: 312
+        x: 171
         y: 0
-        width: 104.5
-        height: 180
+        width: 57.142857
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +211,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8475c2f72b298e660800000000000000
-      internalID: 7415338081800968008
+      spriteID: 67f4f8382c254a4a0800000000000000
+      internalID: -6583045759924482186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: testwalk_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 57.142857
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcf9e04225f03f30800000000000000
+      internalID: 4553408750738341042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: testwalk_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 57.142857
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c825a55802a2ef4e0800000000000000
+      internalID: -1946071669812866420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: testwalk_6
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 57.142857
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a08e3b1987f15820800000000000000
+      internalID: 2905375402870341792
       vertices: []
       indices: 
       edges: []

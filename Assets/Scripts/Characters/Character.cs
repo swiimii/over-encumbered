@@ -4,6 +4,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
+
 public abstract class Character : MonoBehaviour
 {
     public float jumpVelocity = .3f, movementSpeed = 5;
@@ -42,15 +45,26 @@ public abstract class Character : MonoBehaviour
     protected virtual bool CheckIfGrounded()
     {
         var col = GetComponent<Collider2D>();
-        var startPoint = new Vector2(col.bounds.center.x, col.bounds.min.y);
+        var numOfRays = 3;
+        // var startPoint = new Vector2(col.bounds.center.x, col.bounds.min.y);
         var direction = Vector2.down;
         var distance = .1f;
-        var hit = Physics2D.Raycast(startPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Platform"));
-        Debug.DrawRay(startPoint, direction * distance, Color.green);
+        var deadZone = .00f;
+        var startingX = col.bounds.min.x + deadZone;
+        var endingX = col.bounds.max.x - deadZone;
+        var interval = (endingX - startingX) / (numOfRays-1);
+        var extents = col.bounds.extents.y;
 
-        if (hit.transform)
+        for (int i = 0; i < numOfRays; i++)
         {
-            return true;
+            var rayXPosition = startingX + interval * i;
+            var startingPoint = new Vector2(rayXPosition, col.bounds.min.y);
+            var hit = Physics2D.Raycast(startingPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Platform"));
+            Debug.DrawRay(startingPoint, direction * distance, Color.blue);
+            if(hit.transform)
+            {
+                return true;
+            }
         }
         return false;
     }
