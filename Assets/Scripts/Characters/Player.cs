@@ -7,7 +7,7 @@ public class Player : Character
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 8;
+        maxHealth = 3;
         currentHealth = maxHealth;
     }
 
@@ -17,12 +17,10 @@ public class Player : Character
         base.Update();
 
         var movement = LocalPlayerInput.GetHorizontalMovement() * movementSpeed;
-        var spr = GetComponent<SpriteRenderer>();
 
         if (movement < 0 && !wallLeft || movement > 0 && !wallRight)
         {
-            transform.position += Time.deltaTime * movement * Vector3.right;
-            spr.flipX = movement < 0;
+            Move(movement);
         }
 
         if(LocalPlayerInput.IsPressingJump() && isReadyToJump)

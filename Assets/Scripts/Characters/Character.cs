@@ -82,6 +82,13 @@ public abstract class Character : MonoBehaviour
         return false;
     }
 
+    protected virtual void Move(float movement)
+    {
+        var spr = GetComponent<SpriteRenderer>();
+        transform.position += Time.deltaTime * movementSpeed * movement * Vector3.right;
+        spr.flipX = movement < 0;
+    }
+
     protected virtual IEnumerator JumpCooldown()
     {
         yield return new WaitForSeconds(jumpDelay);
