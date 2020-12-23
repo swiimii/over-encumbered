@@ -84,7 +84,7 @@ public abstract class Character : MonoBehaviour
         for (int i = 0; i < numOfRays; i++)
         {
             var rayHeight = startingHeight + interval * i;
-            var startingPoint = new Vector2(transform.position.x + direction * extents, rayHeight);
+            var startingPoint = new Vector2(col.bounds.center.x + direction * extents, rayHeight);
             var hit = Physics2D.Raycast(startingPoint, transform.right * direction, distance, 1 << LayerMask.NameToLayer("Ground"));
             Debug.DrawRay(startingPoint, Vector2.right * direction * distance, Color.blue);
             if(hit.transform)
