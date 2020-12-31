@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(MeowEffect))]
 public class Player : Character
 {
     // Start is called before the first frame update
@@ -56,6 +57,7 @@ public class Player : Character
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            GetComponent<MeowEffect>().PlaySound();
             Damage(other.transform.position);
         }
     }
