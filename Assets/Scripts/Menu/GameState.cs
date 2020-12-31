@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameState
 {
-    public static float bestTime;
+    public static float bestTime = 9999;
 
     public static float mostRecentScore;
 
