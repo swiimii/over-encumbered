@@ -9,15 +9,15 @@ public class Inventory : MonoBehaviour
     [SerializeField] int briefcasesNeeded;
     [SerializeField] Text textBox;
     public List<Sprite> inventory;
-    private void Start() {
-        
-    }
+
+    [SerializeField] float movementSpeedReduction = 0.1f;
     public void AddBriefcase(Sprite briefcase)
     {
         numOfBriefcases += 1;
         AddToInventory(briefcase);
         DecrementBriefcaseTracker();
         GetComponent<Animator>().SetInteger("numBriefcases", numOfBriefcases);
+        GetComponent<Character>().movementSpeed -= movementSpeedReduction;
     }
     public void AddToInventory(Sprite item)
     {

@@ -25,7 +25,11 @@ public class Player : Character
         //if (movement < 0 && !wallLeft || movement > 0 && !wallRight)
         if(!isInvincible)
         {
-            if (!isInvincible &&!(movement < 0 && wallLeft || movement > 0 && wallRight))
+            if (movement < 0 && wallLeft || movement > 0 && wallRight)
+            {
+                Move(0);
+            }
+            else if (!isInvincible)
             {
                 Move(movement);
                 isMoving = movement != 0;
