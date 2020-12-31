@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 
 public abstract class Character : MonoBehaviour
 {
@@ -54,16 +55,18 @@ public abstract class Character : MonoBehaviour
         var endingX = col.bounds.max.x - deadZone;
         var interval = (endingX - startingX) / (numOfRays-1);
         var extents = col.bounds.extents.y;
-
-        for (int i = 0; i < numOfRays; i++)
+        if (GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
-            var rayXPosition = startingX + interval * i;
-            var startingPoint = new Vector2(rayXPosition, col.bounds.min.y);
-            var hit = Physics2D.Raycast(startingPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Platform"));
-            Debug.DrawRay(startingPoint, direction * distance, Color.blue);
-            if(hit.transform)
+            for (int i = 0; i < numOfRays; i++)
             {
-                return true;
+                var rayXPosition = startingX + interval * i;
+                var startingPoint = new Vector2(rayXPosition, col.bounds.min.y);
+                var hit = Physics2D.Raycast(startingPoint, direction, distance, 1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Platform"));
+                Debug.DrawRay(startingPoint, direction * distance, Color.blue);
+                if(hit.transform)
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -99,8 +102,12 @@ public abstract class Character : MonoBehaviour
     protected virtual void Move(float movement)
     {
         var spr = GetComponent<SpriteRenderer>();
-        transform.position += Time.deltaTime * movementSpeed * movement * Vector3.right;
-        spr.flipX = movement < 0;
+        var rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector3(movementSpeed * movement, rb.velocity.y);
+        if (movement != 0)
+        {
+            spr.flipX = movement < 0;
+        }
     }
 
     protected virtual IEnumerator JumpCooldown()
