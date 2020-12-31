@@ -27,4 +27,8 @@ public class Inventory : MonoBehaviour
     {
         textBox.text = (briefcasesNeeded-numOfBriefcases).ToString();
     }
+    public bool FoundAllNeededBriefcases()
+    {
+        return numOfBriefcases >= briefcasesNeeded;
+    }
 }
