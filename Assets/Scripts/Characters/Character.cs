@@ -78,7 +78,7 @@ public abstract class Character : MonoBehaviour
         var col = GetComponent<Collider2D>();
         var numOfRays = 6;
         var distance = .1f;
-        var deadZone = .1f;
+        var deadZone = .0f;
         var startingHeight = col.bounds.min.y + deadZone;
         var endingHeight = col.bounds.max.y - deadZone;
         var interval = (endingHeight - startingHeight) / (numOfRays-1);
